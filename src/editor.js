@@ -580,13 +580,13 @@ function createHTML(options = {}) {
                     exec("insertText", text);
                 }
             });
-            addEventListener(content, 'compositionstart', function(event){
-                compositionStatus = 1;
-            })
-            addEventListener(content, 'compositionend', function (event){
-                compositionStatus = 0;
-                paragraphStatus && formatParagraph(true);
-            })
+//             addEventListener(content, 'compositionstart', function(event){
+//                 compositionStatus = 1;
+//             })
+//             addEventListener(content, 'compositionend', function (event){
+//                 compositionStatus = 0;
+//                 paragraphStatus && formatParagraph(true);
+//             })
 
             var message = function (event){
                 var msgData = JSON.parse(event.data), action = Actions[msgData.type];
